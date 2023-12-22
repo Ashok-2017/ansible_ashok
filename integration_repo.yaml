@@ -1,0 +1,10 @@
+---
+- name: clone integration repo
+  git: > 
+     repo=git@github.com:ashok/gitrepo.git
+     dest=/home/
+     update=yes
+     accept_hostkey=True
+     version={{branch}}
+     force=yes
+   become_user: deploy  
